@@ -1,0 +1,81 @@
+#game {
+    width: 300px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    /* esto posiciona el elemento en medio en vertical*/
+    left: 50%;
+    /* esto posiciona el elemento en medio en horizontal*/
+    transform: translate(-50%, -50%);
+    /* esto ajusta el elemento a la posición correcta */
+}
+
+#container {
+    position: relative;
+    /* esto hace que el contenedor sea un punto de referencia para los elementos hijos */
+    text-align: center;
+    /* esto centra el contenido del contenedor en horizontal */
+    height: 100vh;
+    /* esto establece el alto del contenedor en la altura total de la pantalla */
+}
+
+#messages {
+    width: 100%;
+    /* esto hace que el ancho del mensaje sea igual al ancho del contenedor */
+    text-align: center;
+    /* esto centra el contenido del mensaje en horizontal */
+    position: absolute;
+    /* esto posiciona el mensaje en relación al contenedor */
+    margin-top: auto;
+}
+
+#reset-button {
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.cell {
+    background-color: rgb(251, 234, 234);
+    border: 1px solid #ccc;
+    transition: opacity 1;
+}
+
+.cell:hover {
+    opacity: 0.5;
+    /* esto establece la opacidad en 0.5 cuando el mouse está sobre la celda */
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ccc;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.x {
+    color: #f00;
+}
+
+.o {
+    color: #00f;
+}
+
+.x::before {
+    content: "X";
+    color: #f00;
+}
+
+.o::before {
+    content: "O";
+    color: #00f;
+}
